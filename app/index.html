@@ -1,34 +1,62 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Índex</title>
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<!-- Socket.io -->
-<script type="text/javascript" src="/socket.io/socket.io.js"></script>
-<!-- AmCharts -->
-	<script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
-	<script src="http://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="http://www.amcharts.com/lib/3/themes/light.js"></script>
-<!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBknaxGs0YUizkvAUDk_cYaLO97SklnxcI"></script>
-<script src="/app/index.js"></script>
-<style type="text/css">
-    .height_460, #map {
-        height: 460px;
-    }
-
-    .margins {
-        margin: 0px 0px 100px 0px;
-    }
-</style>
-</head>
-<body class="container-fluid">
-<div id="map" class="row"></div>
-    <div id="charts" class="container">
-    </div>
-</body>
+    <head lang="es">
+        <meta charset="utf-8">
+        <title>Iot</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            html, body {
+                background: url("http://www.ecoticias.com/userfiles/extra/FTYD_CO22214.jpg") no-repeat center center fixed;
+            }
+            .fifty-top-margin{
+                margin-top: 50px;
+            }
+            .fifty-bottom-margin{
+                margin-bottom: 50px;
+            }
+            .more-padding{
+                padding: 40px 40px 40px 40px;
+            }
+        </style>
+    </head>
+    <body class="container">
+        <div class="jumbotron fifty-top-margin">
+            <h1 class="text-center">L'internet de les coses</h1>
+            <p class="text-center">Treball de recerca realitzat per <a href="mailto:victorgarciavilu@gmail.com">Víctor García</a></p>
+            <p class="row"><a href="/app" class="btn btn-primary btn-lg col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">Vols veure la meva aplicació?</a></p>
+        </div>
+        <div class="jumbotron fifty-top-margin fifty-bottom-margin">
+            <div class="container">
+                <h2 class="text-center fifty-bottom-margin"><u>Més informació</u></h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-xs-12">
+                        <div class="thumbnail more-padding">
+                            <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Prezi_logo_transparent_2012.svg/2000px-Prezi_logo_transparent_2012.svg.png" width="280" height="280" alt="prezi">
+                            <div class="caption text-center">
+                                <h3>Presentació</h3>
+                                <a href="/">Aquí tens!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-xs-12">
+                        <div class="thumbnail more-padding">
+                            <img class="image-responsive" src="https://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/256/blue-document-icon.png"  width="280" height="280" alt="document">
+                            <div class="caption text-center">
+                                <h3>Dossier</h3>
+                                <a href="/">Descarrega el dossier en PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-xs-12">
+                        <div class="thumbnail more-padding">
+                                <img class="image-responsive"class="image-responsive" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="280" height="280" alt="github">
+				<div class="caption text-center">                                
+					<h3>Open Source</h3>
+                                	<a href="https://www.github.com/viktoriotw/tr">Disponible en GitHub!</a>
+                            	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
