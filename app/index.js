@@ -23,31 +23,33 @@ $(document).ready(function(){
 
     // Socket.io "historical_data" handler
     socket.on("historical_data", function(response){
-        var data = response.data;
-	console.log(data)
-        for(board of data)
-        {
-            var name = board.name;
+	if(jQuery.isEmptyObject(historical_charts)){
+        	var data = response.data;
+		console.log(data)
+       		for(board of data)
+        	{
+            		var name = board.name;
 
-            // Add maker to Google Maps
-            addMarker(board.location, name, map);
+            		// Add maker to Google Maps
+            		addMarker(board.location, name, map);
 
-            $("#charts").append('<div id="' + name + '" class="row margins"></div>');
-            $("#" + name)
-                .append('<h2 class="col-xs-offset-1">' + "Board: " + name + '</h2>')
-                .append("<hr>")
-                .append('<div id="' + name + "historical" + '" class="col-md-12 height_560"></div>');
+            		$("#charts").append('<div id="' + name + '" class="row margins"></div>');
+            		$("#" + name)
+                		.append('<h2 class="col-xs-offset-1">' + "Board: " + name + '</h2>')
+                		.append("<hr>")
+                		.append('<div id="' + name + "historical" + '" class="col-md-12 height_560"></div>');
 
-            // Generate historical chart
-	    if(board.measurements.length > 0)
-            {
-            	historical_charts[name] = genHistoricalChart(name, board.measurements);
-	    }
-	    else
-            {
-		historical_charts[name] = genHistoricalChart(name, [{concentration: 0, date: new Date}])	
-	    }
-        }
+			// Generate historical chart
+	    		if(board.measurements.length > 0)
+            		{
+            			historical_charts[name] = genHistoricalChart(name, board.measurements);
+	    		}
+	    		else
+            		{
+				historical_charts[name] = genHistoricalChart(name, [{concentration: 0, date: new Date}])	
+	    		}
+        	}
+	}
     });
 
     // Socket.io "live_data" handler
