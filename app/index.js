@@ -117,9 +117,6 @@ var genHistoricalChart = function(name, data)
     graph.valueField = "concentration";
     chart.valueAxes = [{title: "Concentration (ppm)"}] 
 
-    // Graph type
-    graph.type = "smoothedLine";
-
     // Red color for values less than 400
     graph.negativeBase = 400;
     graph.negativeLineColor = "LimeGreen";
